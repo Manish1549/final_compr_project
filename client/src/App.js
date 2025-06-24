@@ -101,7 +101,7 @@ function App() {
     const endpoint = action === 'compress' ? 'compress' : 'decompress';
 
     try {
-      const response = await fetch(`https://my-compression-api.onrender.com/${endpoint}`, {
+const response = await fetch(`https://file-compressor-kzbl.onrender.com/${endpoint}`, {
         method: 'POST',
         body: formData,
       });
