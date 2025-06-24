@@ -50,7 +50,7 @@ git clone <your-repo-url>
 cd <your-project-folder>
 \`\`\`
 
-Change from this in `src` inside client (`App.js`):  
+Change from this in `App.js` in src inside client :  
 ```js
 // fetch(`https://file-compressor-kzbl.onrender.com/${endpoint}}`, { ... })
 // To this for local development:
