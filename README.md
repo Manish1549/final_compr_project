@@ -1,4 +1,5 @@
-# file-compressor
+
+# Data Compression Portal
 
 ## Project Description  
 Data Compression Portal is a web-based application that allows users to compress and decompress files using popular algorithms such as Huffman Coding, Run-Length Encoding (RLE), and LZ77. The portal supports multiple file types including text, images, and binary files, providing file previews, detailed compression statistics, and an easy-to-use interface.
@@ -44,25 +45,27 @@ Data Compression Portal is a web-based application that allows users to compress
 ### Step 1: Clone the Repository  
 If you haven’t cloned the project repository yet, do it now:
 
-```
+\`\`\`
 git clone <your-repo-url>
 cd <your-project-folder>
-```
-// Change this in src inside client (app.js):
-   // fetch(`https://my-compression-api.onrender.com/${endpoint}`, { ... })
+\`\`\`
 
-   // To this for local development:
-   fetch(`http://localhost:5000/${endpoint}`, { ... })
+Change from this in `src` inside client (`App.js`):  
+```js
+// fetch(`https://my-compression-api.onrender.com/${endpoint}`, { ... })
+// To this for local development:
+fetch(`http://localhost:5000/${endpoint}`, { ... })
+```
 
 ---
 
 ### Step 2: Install Backend Dependencies  
 Navigate to the backend folder (or root if backend is in root):
 
-```
+\`\`\`
 cd server
 npm install
-```
+\`\`\`
 
 This will install all required packages including Express, Multer, and other dependencies.
 
@@ -72,16 +75,14 @@ This will install all required packages including Express, Multer, and other dep
 
 Run the backend server:
 
-```
+\`\`\`
 npm start
+\`\`\`
+or directly:
 
-```
-or directly : 
-
-```
+\`\`\`
 node index.js
-
-```
+\`\`\`
 
 By default, the backend server will run on http://localhost:5000
 
@@ -90,10 +91,10 @@ By default, the backend server will run on http://localhost:5000
 ### Step 4: Install Frontend Dependencies  
 Open a new terminal window/tab, navigate to the frontend folder :
 
-```
+\`\`\`
 cd client
 npm install
-```
+\`\`\`
 
 This installs React, Tailwind CSS, Axios, and other frontend dependencies.
 
@@ -103,9 +104,9 @@ This installs React, Tailwind CSS, Axios, and other frontend dependencies.
 
 Run the React app:
 
-```
+\`\`\`
 npm start
-```
+\`\`\`
 
 The frontend app will launch in your browser at http://localhost:3000
 
@@ -119,17 +120,17 @@ The frontend app will launch in your browser at http://localhost:3000
 ---
 
 ### Optional: Environment Variables  
-change the port address in the compress section of index.js and app.js 
+Change the port address in the compress section of `index.js` and `App.js` if needed:
 
-```
+\`\`\`
 PORT=5000
 REACT_APP_API_URL=http://localhost:5000
-```
+\`\`\`
 
 Make sure to restart servers after adding environment variables.
 
 ---
 
 ## Deployed Demo  
-https://file-compressor-kzbl.onrender.com
+https://file-compressor-kzbl.onrender.com  
 https://file-compressor-m46m.vercel.app/
