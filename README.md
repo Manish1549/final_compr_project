@@ -52,7 +52,7 @@ cd <your-project-folder>
 
 Change from this in `src` inside client (`App.js`):  
 ```js
-// fetch(`https://my-compression-api.onrender.com/${endpoint}`, { ... })
+// fetch(`https://file-compressor-kzbl.onrender.com/${endpoint}}`, { ... })
 // To this for local development:
 fetch(`http://localhost:5000/${endpoint}`, { ... })
 ```
