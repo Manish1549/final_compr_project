@@ -1,136 +1,174 @@
-
-# Data Compression Portal
-
-## Project Description  
-Data Compression Portal is a web-based application that allows users to compress and decompress files using popular algorithms such as Huffman Coding, Run-Length Encoding (RLE), and LZ77. The portal supports multiple file types including text, images, and binary files, providing file previews, detailed compression statistics, and an easy-to-use interface.
-
-## Features  
-- Upload files of various formats: text, images, and binaries.  
-- Compress and decompress files using Huffman Coding, RLE, and LZ77 algorithms.  
-- Preview uploaded files before processing (text and image preview supported).  
-- Display detailed statistics on compression ratio, original vs compressed size, and processing time.  
-- Warn users if certain algorithms may not perform optimally on the selected file type.  
-- Download the processed files with preserved file extensions.  
-- Responsive and user-friendly interface styled with Tailwind CSS.  
-- Backend API with Node.js and Express handling file uploads and compression logic.
-
-## Tech Stack  
-
-**Frontend:**  
-- React.js — For building the interactive user interface  
-- Tailwind CSS — For styling and responsive design  
-- Poppins Google Font — For modern typography  
-- Axios — For HTTP requests to backend APIs  
-
-**Backend:**  
-- Node.js — JavaScript runtime environment  
-- Express.js — Web framework for creating REST APIs  
-- Multer — Middleware for handling multipart/form-data (file uploads)  
-- Compression algorithms implemented in JavaScript:  
-  - Huffman Coding  
-  - Run-Length Encoding (RLE)  
-  - LZ77 Compression  
-
-**Other Tools:**  
-- Cors — To enable cross-origin resource sharing between frontend and backend  
-
-## Setup Instructions to Run the Project Locally
-
-### Prerequisites  
-- Make sure you have **Node.js** (v14 or later) installed on your machine.  
-- You also need **npm** (comes with Node.js) or **yarn** as your package manager.
+Here’s your updated, polished, and **rendered `README.md`** version of the **Data Compression Portal** — ready to upload to your GitHub repo:
 
 ---
 
-### Step 1: Clone the Repository  
-If you haven’t cloned the project repository yet, do it now:
+````markdown
+# 🗜️ Data Compression Portal
 
-\`\`\`
+A web-based application that enables users to **compress and decompress files** using widely known algorithms such as **Huffman Coding**, **Run-Length Encoding (RLE)**, and **LZ77**. It supports multiple file types including text, images, and binaries, and offers real-time previews, compression statistics, and a clean, responsive UI.
+
+---
+
+## 🚀 Features
+
+- 📁 Upload files of various formats: text, images, binaries
+- 📦 Compress and decompress using:
+  - Huffman Coding
+  - Run-Length Encoding (RLE)
+  - LZ77
+- 🔍 Preview uploaded files (text or image)
+- 📊 Detailed compression stats:
+  - Original vs. compressed size
+  - Compression ratio
+  - Processing time
+- ⚠️ Algorithm suitability warnings for file types
+- 📥 Download processed files with correct extensions
+- 💡 Smooth, responsive UI with Tailwind CSS
+
+---
+
+## 🧱 Tech Stack
+
+### 🖥️ Frontend
+- **React.js** – UI framework
+- **Tailwind CSS** – Utility-first styling
+- **Axios** – API interaction
+- **Google Fonts (Poppins)** – Typography
+
+### ⚙️ Backend
+- **Node.js + Express** – Server and API handling
+- **Multer** – File upload middleware
+- **Custom JS Implementations** of:
+  - Huffman Coding
+  - Run-Length Encoding
+  - LZ77
+
+### 🧰 Tools
+- **CORS** – Cross-Origin Resource Sharing
+
+---
+
+## 🛠️ Setup Instructions
+
+### ✅ Prerequisites
+- Node.js (v14+)
+- npm or yarn
+
+---
+
+### 🔄 Step 1: Clone the Repository
+
+```bash
 git clone <your-repo-url>
 cd <your-project-folder>
-\`\`\`
+````
 
-Change from this in `App.js` in src inside client :  
+> 🔧 In `App.js` (inside `client/src`), modify the backend endpoint for local development:
+
 ```js
-// fetch(`https://file-compressor-kzbl.onrender.com/${endpoint}}`, { ... })
-// To this for local development:
-fetch(`http://localhost:5000/${endpoint}`, { ... })
+// Change this:
+fetch(`https://file-compressor-kzbl.onrender.com/${endpoint}`)
+
+// To this:
+fetch(`http://localhost:5000/${endpoint}`)
 ```
 
 ---
 
-### Step 2: Install Backend Dependencies  
-Navigate to the backend folder (or root if backend is in root):
+### 📦 Step 2: Install Backend Dependencies
 
-\`\`\`
+```bash
 cd server
 npm install
-\`\`\`
-
-This will install all required packages including Express, Multer, and other dependencies.
+```
 
 ---
 
-### Step 3: Start the Backend Server  
+### ▶️ Step 3: Start the Backend Server
 
-Run the backend server:
-
-\`\`\`
+```bash
 npm start
-\`\`\`
-or directly:
+```
 
-\`\`\`
+Or directly:
+
+```bash
 node index.js
-\`\`\`
+```
 
-By default, the backend server will run on http://localhost:5000
+Backend will run on [http://localhost:5000](http://localhost:5000)
 
 ---
 
-### Step 4: Install Frontend Dependencies  
-Open a new terminal window/tab, navigate to the frontend folder :
+### 💻 Step 4: Install Frontend Dependencies
 
-\`\`\`
+Open a new terminal:
+
+```bash
 cd client
 npm install
-\`\`\`
-
-This installs React, Tailwind CSS, Axios, and other frontend dependencies.
+```
 
 ---
 
-### Step 5: Start the Frontend Development Server  
+### ▶️ Step 5: Start the Frontend React App
 
-Run the React app:
-
-\`\`\`
+```bash
 npm start
-\`\`\`
+```
 
-The frontend app will launch in your browser at http://localhost:3000
-
----
-
-### Step 6: Use the Application  
-- Upload files on the frontend interface.  
-- Choose compression/decompression algorithms.  
-- Process files and download results.
+Frontend will run on [http://localhost:3000](http://localhost:3000)
 
 ---
 
-### Optional: Environment Variables  
-Change the port address in the compress section of `index.js` and `App.js` if needed:
+### ⚙️ Optional: Environment Variables
 
-\`\`\`
+Example setup in `.env`:
+
+```env
 PORT=5000
 REACT_APP_API_URL=http://localhost:5000
-\`\`\`
+```
 
-Make sure to restart servers after adding environment variables.
+Restart both frontend and backend after making changes.
 
 ---
 
-## Deployed Demo  
-https://file-compressor-kzbl.onrender.com  
-https://file-compressor-m46m.vercel.app/
+## 🌐 Deployed Demo
+
+* Backend: [https://file-compressor-kzbl.onrender.com](https://file-compressor-kzbl.onrender.com)
+* Frontend: [https://file-compressor-m46m.vercel.app](https://file-compressor-m46m.vercel.app)
+
+---
+
+## 👨‍💻 Author
+
+**Manish Saharan**
+*B.Tech, Electrical Engineering, IIT Roorkee*
+[GitHub](https://github.com/Manish1549) • [LinkedIn](https://linkedin.com/in/manish-saharan)
+
+---
+
+## 📄 License
+
+Licensed under [MIT License](LICENSE)
+
+---
+
+## ✅ Status
+
+🎯 **Ready for production**
+💬 Pull requests, feedback, and forks welcome!
+
+```
+
+---
+
+Let me know if you'd like me to:
+- Auto-generate a `.gitignore` for this project
+- Create a `package.json` template
+- Add deployment instructions (Vercel + Render combo)  
+- Include badges (CI, License, Demo)
+
+Just say the word.
+```
